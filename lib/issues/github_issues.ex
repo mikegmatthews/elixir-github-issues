@@ -1,8 +1,9 @@
 defmodule Issues.GithubIssues do
-
+  
   require Logger
   
   @user_agent [ {"User-agent", "Elixir dave@pragprog.com"} ]
+  # use a module attribute to fetch the value at compile time
   @github_url Application.compile_env(:issues, :github_url)
 
   def fetch(user, project) do
